@@ -1,6 +1,7 @@
 { self, ... }:
 let
   name = "Mattias Evensson";
+  email = "mattias@evensson.eu";
 in
 {
 
@@ -21,6 +22,12 @@ in
       file = {
         ".ssh/id_ed25519.pub".source = ./id_ed25519.pub;
       };
+    };
+
+
+    programs.git = {
+      userName = name;
+      userEmail = email;
     };
   };
 
