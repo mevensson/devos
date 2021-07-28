@@ -6,6 +6,7 @@ in
 
   age.secrets.matte_password.file = "${self}/secrets/matte_password.age";
   age.secrets.matte_id_ed25519.file = "${self}/secrets/matte_id_ed25519.age";
+  age.secrets.matte_id_ed25519.owner = "matte";
 
   home-manager.users.matte = { suites, lib, ... }: {
     imports = suites.base;
