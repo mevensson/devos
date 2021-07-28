@@ -52,9 +52,9 @@
   services.xserver.libinput.enable = true;
 
   # Gnome
-  service.xserver.displayManager.gdm.enable = true;
-  service.xserver.displayManager.gdm.wayland = true;
-  service.xserver.desktopManageranager.gnome3.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.displayManager.gdm.wayland = true;
+  services.xserver.desktopManager.gnome3.enable = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
