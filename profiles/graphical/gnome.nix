@@ -24,7 +24,7 @@
         enable = true;
         wayland = true;
       };
-      desktopManager.gnome3 = {
+      desktopManager.gnome = {
         enable = true;
       };
     };
