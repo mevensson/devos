@@ -89,7 +89,8 @@
             users = digga.lib.importers.rakeLeaves ./users;
           };
           suites = with profiles; rec {
-            base = [ core services.sshd users.matte users.root ];
+            base = [ core misc.boot.systemd misc.locales services.sshd users.matte users.root ];
+            desktop = base ++ [ graphical.gnome graphical.sound ];
           };
         };
       };
