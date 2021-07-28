@@ -89,7 +89,7 @@
             users = digga.lib.importers.rakeLeaves ./users;
           };
           suites = with profiles; rec {
-            base = [ core users.nixos users.root ];
+            base = [ core users.matte users.root ];
           };
         };
       };
