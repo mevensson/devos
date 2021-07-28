@@ -26,7 +26,7 @@ in
 
   users.users.matte = {
     uid = 1000;
-    passwordFile = "/run/secrets/matte";
+    passwordFile = "/run/secrets/matte_password";
     description = name;
     isNormalUser = true;
     extraGroups = [ "wheel" ];
