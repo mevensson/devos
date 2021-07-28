@@ -32,6 +32,6 @@ in
     extraGroups = [ "wheel" ];
   };
 
-  users.users.nrd.openssh.authorizedKeys.keyFiles = [ ./id_ed25519.pub ];
+  users.users.matte.openssh.authorizedKeys.keyFiles = [ ./id_ed25519.pub ];
 
 }
