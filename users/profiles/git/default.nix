@@ -7,7 +7,7 @@
     };
 
     aliases = {
-      a = "add -p";
+      a = "add";
       co = "checkout";
       cob = "checkout -b";
       f = "fetch -p";
