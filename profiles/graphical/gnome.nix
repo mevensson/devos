@@ -6,7 +6,10 @@
     variety
   ];
 
-  fonts.fonts = [ pkgs.corefonts ];
+  fonts.fonts = [
+    pkgs.corefonts
+    pkgs.fira-code
+  ];
 
   services = {
     # Enable the X11 windowing system.
