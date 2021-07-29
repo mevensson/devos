@@ -83,6 +83,12 @@
         hosts = {
           /* set host specific properties here */
           NixOS = { };
+          t14g1 = {
+            modules = [
+              nixos-hardware.nixosModules.lenovo-thinkpad-t14-amd-gen1
+              nixos-hardware.nixosModules.common-pc-laptop-ssd
+            ];
+          };
         };
         importables = rec {
           profiles = digga.lib.importers.rakeLeaves ./profiles // {
