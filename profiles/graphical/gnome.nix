@@ -6,6 +6,8 @@
     variety
   ];
 
+  boot.plymouth.enable = true;
+
   fonts.fonts = [
     pkgs.corefonts
     pkgs.fira-code
