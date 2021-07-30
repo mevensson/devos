@@ -8,9 +8,10 @@
 
   boot.plymouth.enable = true;
 
-  fonts.fonts = [
-    pkgs.corefonts
-    pkgs.fira-code
+  fonts.fonts = with pkgs; [
+    corefonts
+    fira-code
+    (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
   ];
 
   services = {
