@@ -2,6 +2,23 @@
 {
   environment.systemPackages = with pkgs; [
     gnome3.gnome-tweaks
+    #gnomeExtensions.arcmenu
+    gnomeExtensions.appindicator
+    gnomeExtensions.blur-my-shell
+    gnomeExtensions.clipboard-indicator
+    gnomeExtensions.custom-hot-corners-extended
+    gnomeExtensions.dash-to-dock
+    gnomeExtensions.dash-to-panel
+    gnomeExtensions.espresso
+    gnomeExtensions.extension-list
+    gnomeExtensions.just-perfection
+    gnomeExtensions.net-speed-simplified
+    gnomeExtensions.openweather
+    gnomeExtensions.screenshot-tool
+    gnomeExtensions.sound-output-device-chooser
+    gnomeExtensions.tiling-assistant
+    gnomeExtensions.vitals
+    gnomeExtensions.weather-in-the-clock
     firefox
     variety
   ];
