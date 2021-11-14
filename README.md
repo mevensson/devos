@@ -12,13 +12,13 @@ Make an awesome template for NixOS users, with consideration for common tools li
 [devshell][devshell], and [more](./doc/integrations).
 
 ### No. Why _flakes_?
-Flakes are a part of an explicit push to improve [Nix's UI](https://github.com/NixOS/nix/blob/master/doc/manual/src/contributing/cli-guideline.md), and have become an intergral part of that effort. 
+Flakes are a part of an explicit push to improve [Nix's UX](https://github.com/NixOS/nix/blob/master/doc/manual/src/contributing/cli-guideline.md), and have become an integral part of that effort. 
 
 They also make [Nix expressions](https://nixos.org/manual/nix/unstable/expressions/expression-syntax.html) easier to distribute and reuse with convient [flake references](https://github.com/NixOS/nix/blob/master/src/nix/flake.md#flake-references) for building or using packages, modules, and whole systems.
 
 ## Getting Started
 Check out the [guide](https://devos.divnix.com/start) to get up and running.
-Also, have a look at [_flake.nix_][toc]. If anything is not immediately 
+Also, have a look at [_flake.nix_](./flake.nix). If anything is not immediately 
 discoverable via "[`digga`][digga]'s [`mkFlake`][mk-flake],
 please file a bug report.
 
@@ -82,10 +82,10 @@ DevOS is licensed under the [MIT License][mit].
 [giants]: https://en.wikipedia.org/wiki/Standing_on_the_shoulders_of_giants
 [home-manager]: https://nix-community.github.io/home-manager
 [mit]: https://mit-license.org
-[mk-flake]: https://github.com/divnix/digga/tree/master/src/mkFlake
+[mk-flake]: https://github.com/divnix/digga/tree/main/src/mkFlake
 [nix]: https://nixos.org/manual/nix/stable
 [nixos]: https://nixos.org/manual/nixos/stable
 [nixpkgs]: https://github.com/NixOS/nixpkgs
 [nvfetcher]: https://github.com/berberman/nvfetcher
 [please]: https://github.com/nrdxp/devos/tree/nrd
-
+[matrix]: https://matrix.to/#/#devos:nixos.org

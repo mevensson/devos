@@ -7,8 +7,8 @@
 
   inputs =
     {
-      nixos.url = "nixpkgs/release-21.05";
-      latest.url = "nixpkgs/nixos-unstable";
+      nixos.url = "github:nixos/nixpkgs/release-21.05";
+      latest.url = "github:nixos/nixpkgs/nixos-unstable";
 
       digga.url = "github:divnix/digga";
       digga.inputs.nixpkgs.follows = "nixos";
@@ -77,11 +77,14 @@
               nur.overlay
               agenix.overlay
               nvfetcher.overlay
-              deploy.overlay
               ./pkgs/default.nix
             ];
           };
-          latest = { };
+          latest = {
+            overlays = [
+              deploy.overlay
+            ];
+          };
         };
 
         lib = import ./lib { lib = digga.lib // nixos.lib; };
@@ -99,8 +102,8 @@
           hostDefaults = {
             system = "x86_64-linux";
             channelName = "nixos";
-            imports = [ (digga.lib.importModules ./modules) ];
-            externalModules = [
+            imports = [ (digga.lib.importExportableModules ./modules) ];
+            modules = [
               { lib.our = self.lib; }
               digga.nixosModules.bootstrapIso
               digga.nixosModules.nixConfig
@@ -133,8 +136,8 @@
         };
 
         home = {
-          imports = [ (digga.lib.importModules ./users/modules) ];
-          externalModules = [ ];
+          imports = [ (digga.lib.importExportableModules ./users/modules) ];
+          modules = [ ];
           importables = rec {
             profiles = digga.lib.rakeLeaves ./users/profiles;
             suites = with profiles; rec {

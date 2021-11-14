@@ -4,7 +4,7 @@
 Assuming you're happy with your existing partition layout, you can generate a
 basic NixOS configuration for your system using:
 ```sh
-flk up
+bud up
 ```
 
 This will make a new file `hosts/up-$(hostname).nix`, which you can edit to
@@ -38,7 +38,7 @@ Now might be a good time to read the docs on [suites](../concepts/suites.md) and
 
 Once you're ready to deploy `hosts/my-host.nix`:
 ```sh
-flk my-host switch
+bud my-host switch
 ```
 
 
@@ -47,8 +47,5 @@ This calls `nixos-rebuild` with sudo to build and install your configuration.
 > ##### _Notes:_
 > - Instead of `switch`, you can pass `build`, `test`, `boot`, etc just as with
 >   `nixos-rebuild`.
->
-> - It is convenient to have the template living at `/etc/nixos` so you can
->   simply `sudo nixos-rebuild switch` from anywhere on the system, but it is
->   not required.
+
 

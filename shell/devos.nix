@@ -30,10 +30,6 @@ in
     unset _PATH
   '');
 
-  packages = with pkgs; [
-    git-crypt
-  ];
-
   commands = with pkgs; [
     (devos nixUnstable)
     (devos agenix)
@@ -41,7 +37,7 @@ in
       category = "devos";
       name = pkgs.nvfetcher-bin.pname;
       help = pkgs.nvfetcher-bin.meta.description;
-      command = "cd $DEVSHELL_ROOT/pkgs; ${pkgs.nvfetcher-bin}/bin/nvfetcher -c ./sources.toml --no-output $@; nixpkgs-fmt _sources/";
+      command = "cd $PRJ_ROOT/pkgs; ${pkgs.nvfetcher-bin}/bin/nvfetcher -c ./sources.toml $@";
     }
     (linter nixpkgs-fmt)
     (linter editorconfig-checker)
