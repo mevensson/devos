@@ -16,7 +16,7 @@ in
       activation.myActivationAction =
         lib.hm.dag.entryAfter [ "writeBoundary" ] ''
           mkdir -p ~/.ssh
-          ln -sf /run/secrets/matte_id_ed25519 ~/.ssh/id_ed25519
+          ln -sf /run/agenix/matte_id_ed25519 ~/.ssh/id_ed25519
         '';
 
       file = {
@@ -33,7 +33,7 @@ in
 
   users.users.matte = {
     uid = 1000;
-    passwordFile = "/run/secrets/matte_password";
+    passwordFile = "/run/agenix/matte_password";
     description = name;
     isNormalUser = true;
     extraGroups = [ "wheel" ];
