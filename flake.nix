@@ -130,7 +130,7 @@
             };
             suites = with profiles; rec {
               base = [ core misc.boot.systemd misc.locales services.sshd users.matte users.root ];
-              desktop = base ++ [ graphical.gnome graphical.sound graphical.steam ];
+              desktop = base ++ [ graphical.gnome graphical.sound graphical.steam graphical.displaycal ];
             };
           };
         };
