@@ -2,8 +2,17 @@
   programs.git = {
     enable = true;
 
+    delta = {
+      enable = true;
+      options = {
+        line-numbers = true;
+      };
+    };
+
     extraConfig = {
+      merge.conflictstyle = "diff3";
       pull.rebase = false;
+      rebase.autosquash = true;
     };
 
     aliases = {
