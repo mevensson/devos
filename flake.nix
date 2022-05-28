@@ -107,6 +107,7 @@
             /* set host specific properties here */
             NixOS = { };
             t14g1 = {
+              channelName = "latest";
               modules = [
                 nixos-hardware.nixosModules.lenovo-thinkpad-t14-amd-gen1
                 nixos-hardware.nixosModules.common-pc-laptop-ssd
@@ -119,7 +120,7 @@
             };
             suites = with profiles; rec {
               base = [ core misc.boot.systemd misc.locales services.sshd users.matte users.root ];
-              desktop = base ++ [ graphical.gnome graphical.sound graphical.steam graphical.displaycal graphical.libreoffice ];
+              desktop = base ++ [ graphical.gnome graphical.sound graphical.steam graphical.libreoffice ];
             };
           };
         };
