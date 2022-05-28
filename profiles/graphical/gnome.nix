@@ -1,7 +1,8 @@
 { pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
-    gnome3.gnome-tweaks
+    gnome.gnome-terminal
+    gnome.gnome-tweaks
     #gnomeExtensions.arcmenu
     gnomeExtensions.appindicator
     gnomeExtensions.blur-my-shell
