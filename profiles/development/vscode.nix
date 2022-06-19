@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
-    vscode-fhs
+    vscode
   ];
 
   nixpkgs.config.allowUnfree = true;
