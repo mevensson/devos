@@ -123,6 +123,7 @@
                 core
                 misc.boot.systemd
                 misc.locales
+                services.fwupd
                 services.sshd
                 users.matte
                 users.root
